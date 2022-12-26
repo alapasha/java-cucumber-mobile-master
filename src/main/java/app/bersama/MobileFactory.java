@@ -22,7 +22,7 @@ public class MobileFactory {
         DesiredCapabilities dc = new DesiredCapabilities();
 
         URL url = new URL("http://localhost:4723/wd/hub");
-        String absPathApk = System.getProperty("user.dir") + File.separator + "apk/app-second-hand.apk";
+        String absPathApk = System.getProperty("user.dir") + File.separator + "apk/app-release.apk";
 
         if (platformType.equalsIgnoreCase("ANDROID")) {
             dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
