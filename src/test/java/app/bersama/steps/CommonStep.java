@@ -47,12 +47,12 @@ public class CommonStep {
 
         loginPage.assertLogin();
 }
-    @Then("user should be able to logout")
-    public void user_should_be_able_to_logout() {
-        MyAccountPage myaccountPage = new MyAccountPage(
-                DriverManager.getInstance().getDriver());
-
-        myaccountPage.assert_logout(); }
+//    @Then("user should be able to logout")
+//    public void user_should_be_able_to_logout() {
+//        MyAccountPage myaccountPage = new MyAccountPage(
+//                DriverManager.getInstance().getDriver());
+//
+//        myaccountPage.assert_logout(); }
 }
 
 
