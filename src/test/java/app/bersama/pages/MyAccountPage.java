@@ -61,10 +61,9 @@ public class MyAccountPage {
         wait.until(ExpectedConditions.visibilityOf(button_logout));
         button_logout.click();
     }
-    public void assert_logout() {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        Keyword.waitUntilElementIsVisible(verifyLogout);
-        verifyLogout.isDisplayed(); }
+    public void VerifyLogout(String expectedtext){
+        Assert.assertEquals(verifyLogout.getText(), expectedtext);
+    }
 
     public void verifyLogin(String expectedName, String expectedPhone, String expectedEmail){
         Assert.assertEquals(label_name.getText(), expectedName);

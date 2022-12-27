@@ -7,4 +7,4 @@ Feature: Logout
     Given user navigate to login page
     When user login with valid credential
     Then user logout
-#    * user should be able to logout
+    * user should be able to logout
