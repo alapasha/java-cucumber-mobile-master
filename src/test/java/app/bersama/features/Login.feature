@@ -1,4 +1,4 @@
-login
+@login
 Feature: Login
 
   @login @positive
