@@ -66,4 +66,9 @@ public class MyAccountPage {
         Keyword.waitUntilElementIsVisible(verifyLogout);
         verifyLogout.isDisplayed(); }
 
+    public void verifyLogin(String expectedName, String expectedPhone, String expectedEmail){
+        Assert.assertEquals(label_name.getText(), expectedName);
+        Assert.assertEquals(label_phoneNo.getText(), expectedPhone);
+        Assert.assertEquals(label_email.getText(), expectedEmail); }
+
 }
