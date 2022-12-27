@@ -5,7 +5,9 @@ import app.bersama.pages.LoginPage;
 import app.bersama.pages.MyAccountPage;
 import app.bersama.pages.NavigationSectionPage;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 /**
  * @author regiewby on 22/12/22
@@ -31,11 +33,11 @@ public class CommonStep {
         loginPage.tapButtonLogin();
     }
 
-    // @Then("user should be able to login")
-    // public void user_should_be_able_to_login() {
-    // Write code here that turns the phrase above into concrete actions
-    // MyAccountPage myAccountPage = new MyAccountPage(
-    // DriverManager.getInstance().getDriver());
-
-    // MyAccountPage.verifyLogin(validation);
+     @Then("user should be able to login")
+    public void userShouldBeAbleToLogin() {
+        MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
+        Assert.assertTrue(myAccountPage.verifyLogin());
+    }
 }
+
+
