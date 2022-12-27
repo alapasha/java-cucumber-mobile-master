@@ -43,6 +43,6 @@
 //    @Then("user successfully register new account")
 //    public void user_successfully_register_new_account() {
 //        MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
-//        myAccountPage.verifyLogin(name, phoneNo, email);
+//        myAccountPage.verifyLogin(name,phoneNo,email);
 //    }
 //}

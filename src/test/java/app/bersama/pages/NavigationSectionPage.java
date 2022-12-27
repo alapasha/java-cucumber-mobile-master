@@ -1,6 +1,7 @@
 package app.bersama.pages;
 
 import app.bersama.DriverManager;
+import app.bersama.Keyword;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

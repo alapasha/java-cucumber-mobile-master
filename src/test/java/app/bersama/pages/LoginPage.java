@@ -1,6 +1,7 @@
 package app.bersama.pages;
 
 import app.bersama.DriverManager;
+import app.bersama.Keyword;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,6 +38,9 @@ public class LoginPage {
     @FindBy(id = "id.binar.fp.secondhand:id/tv_register")
     private WebElement button_register;
 
+    @FindBy (id = "id.binar.fp.secondhand:id/iv_profile")
+    private WebElement assertLogin;
+
     public void enterCredential(String Email, String Password){
         entry_email.sendKeys(Email);
         entry_password.sendKeys(Password);
@@ -48,4 +52,10 @@ public class LoginPage {
     public void tapButtonRegister() {
         button_register.click();
     }
+
+    public void assertLogin(){
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        Keyword.waitUntilElementIsVisible(assertLogin);
+        assertLogin.isDisplayed(); }
+
 }
