@@ -5,4 +5,4 @@ Feature: Register
   Scenario: user should be able to register new account
     Given user navigate to register page
     When user entry data
-    Then user successfully register new account
+    Then user should be able to login
