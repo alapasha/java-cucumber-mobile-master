@@ -33,12 +33,7 @@ public class CommonStep {
         LoginPage loginPage = new LoginPage(DriverManager.getInstance().getDriver());
         loginPage.enterCredential("raushanfiqriarya@gmail.com", "Password*1");
         loginPage.tapButtonLogin();
-    }
 
-    @Then("user logout")
-    public void user_logout() {
-        MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
-        myAccountPage.tapButtonLogout();
     }
 
     @Then("user should be able to login")
@@ -48,18 +43,6 @@ public class CommonStep {
 
         loginPage.assertLogin();
 
-    }
-
-    @Then("user verify logout")
-    public void user_verify_logout() {
-        NavigationSectionPage navigationSectionPage = new NavigationSectionPage
-                (DriverManager.getInstance().getDriver());
-
-        NotificationPage notificationPage = new NotificationPage
-                (DriverManager.getInstance().getDriver());
-
-        navigationSectionPage.tapNotification();
-        notificationPage.VerifyLogout();
     }
 }
 

@@ -47,6 +47,15 @@ public class MyAccountPage {
     @FindBy(id = "id.binar.fp.secondhand:id/tv_title_page")
     private WebElement label_myaccount;
 
+    @FindBy(id= "id.binar.fp.secondhand:id/seller")
+    private WebElement button_mysellinglist;
+
+    @FindBy(id= "id.binar.fp.secondhand:id/order")
+    private WebElement button_myorder;
+
+    @FindBy(id= "id.binar.fp.secondhand:id/iv_edit")
+    private WebElement button_editprofile;
+
 
     public void tapButtonLogin() {
         WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
@@ -65,5 +74,15 @@ public class MyAccountPage {
         Assert.assertEquals(label_phoneNo.getText(), expectedPhone);
         Assert.assertEquals(label_email.getText(), expectedEmail);
 
+    }
+
+    public void tapButtonSellingList() {
+        button_mysellinglist.click();
+    }
+    public void tapButtonMyOrder() {
+        button_mysellinglist.click();
+    }
+    public void tapButtonEditProfile() {
+        button_editprofile.click();
     }
 }
