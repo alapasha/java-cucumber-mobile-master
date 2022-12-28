@@ -22,14 +22,14 @@ public class MobileFactory {
         DesiredCapabilities dc = new DesiredCapabilities();
 
         URL url = new URL("http://localhost:4723/wd/hub");
-        String absPathApk = System.getProperty("user.dir") + File.separator + "apk/app-second-hand.apk";
+        String absPathApk = System.getProperty("user.dir") + File.separator + "apk/app-release.apk";
 
         if (platformType.equalsIgnoreCase("ANDROID")) {
             dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
-            dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"13");
+            dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"11");
             dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.ANDROID.toString());
             dc.setCapability(MobileCapabilityType.APP, absPathApk);
-            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 5 API 33");
+            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "pixel3");
             dc.setCapability(MobileCapabilityType.NO_RESET, false);
 
         } else if (platformType.equalsIgnoreCase("IOS")) {

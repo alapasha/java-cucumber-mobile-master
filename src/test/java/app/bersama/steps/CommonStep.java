@@ -7,6 +7,7 @@ import app.bersama.pages.NavigationSectionPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.springframework.context.annotation.EnableMBeanExport;
 import org.testng.Assert;
 
 /**
@@ -33,10 +34,25 @@ public class CommonStep {
         loginPage.tapButtonLogin();
     }
 
-     @Then("user should be able to login")
-    public void userShouldBeAbleToLogin() {
+    @Then("user logout")
+    public void user_logout() {
         MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
-        Assert.assertTrue(myAccountPage.verifyLogin());
+        myAccountPage.tapButtonLogout();
+    }
+
+    @Then("user should be able to login")
+    public void user_should_be_able_to_verify_to_my_account_page() {
+        LoginPage loginPage = new LoginPage(
+                DriverManager.getInstance().getDriver());
+
+        loginPage.assertLogin();
+
+    }
+
+    @Then("user should be able to logout")
+    public void user_successfully_register_new_account(String text) {
+        MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
+        myAccountPage.VerifyLogout(text);
     }
 }
 
