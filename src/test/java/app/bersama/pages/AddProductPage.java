@@ -61,8 +61,7 @@ public class AddProductPage {
     @FindBy(id = "id.binar.fp.secondhand:id/btn_publish")
     private WebElement buttonPublish;
 
-    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup[2]/android.widget.TextView")
-    private WebElement textDaftarJualSaya;
+
 
     public void addNewProduct(
         String Name,
@@ -90,9 +89,4 @@ public class AddProductPage {
         buttonPublish.click();
     }
 
-    public boolean redirectedToSellListPage() {
-        WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOf(textDaftarJualSaya));
-        return textDaftarJualSaya.isDisplayed();
-    }
 }

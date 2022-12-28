@@ -3,6 +3,7 @@ package app.bersama.steps;
 import app.bersama.DriverManager;
 import app.bersama.TestDataProvider;
 import app.bersama.pages.AddProductPage;
+import app.bersama.pages.MyProductPage;
 import com.beust.ah.A;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,7 +30,7 @@ public class AddProductStep {
 
     @Then("user redirected to my sell list page")
     public void userRedirectedToSellListPage(){
-       AddProductPage addProductPage = new AddProductPage(DriverManager.getInstance().getDriver());
-        Assert.assertTrue(addProductPage.redirectedToSellListPage());
+       MyProductPage myProductPage = new MyProductPage(DriverManager.getInstance().getDriver());
+        Assert.assertTrue(myProductPage.redirectedToSellListPage());
     }
 }
