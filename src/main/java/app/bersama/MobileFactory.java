@@ -29,7 +29,7 @@ public class MobileFactory {
             dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"13");
             dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.ANDROID.toString());
             dc.setCapability(MobileCapabilityType.APP, absPathApk);
-            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 5 API 33");
+            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "sdk_gphone64_x86_64");
             dc.setCapability(MobileCapabilityType.NO_RESET, false);
 
         } else if (platformType.equalsIgnoreCase("IOS")) {
