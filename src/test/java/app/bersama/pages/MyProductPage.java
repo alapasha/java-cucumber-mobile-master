@@ -53,4 +53,9 @@ public class MyProductPage {
         wait.until(ExpectedConditions.visibilityOf(deleteSnackBar));
         return deleteSnackBar.isDisplayed();
     }
+
+    public void showProductList() {
+        buttonDaftarJual.click();
+    }
+
 }
