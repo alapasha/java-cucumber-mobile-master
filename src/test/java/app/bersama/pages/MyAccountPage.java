@@ -47,8 +47,6 @@ public class MyAccountPage {
     @FindBy(id = "id.binar.fp.secondhand:id/tv_title_page")
     private WebElement label_myaccount;
 
-    @FindBy (id = "id.binar.fp.secondhand:id/tv_category")
-    private WebElement verifyLogout;
 
     public void tapButtonLogin() {
         WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
@@ -61,13 +59,11 @@ public class MyAccountPage {
         wait.until(ExpectedConditions.visibilityOf(button_logout));
         button_logout.click();
     }
-    public void VerifyLogout(String expectedtext){
-        Assert.assertEquals(verifyLogout.getText(), expectedtext);
-    }
 
     public void verifyLogin(String expectedName, String expectedPhone, String expectedEmail){
         Assert.assertEquals(label_name.getText(), expectedName);
         Assert.assertEquals(label_phoneNo.getText(), expectedPhone);
-        Assert.assertEquals(label_email.getText(), expectedEmail); }
+        Assert.assertEquals(label_email.getText(), expectedEmail);
 
+    }
 }

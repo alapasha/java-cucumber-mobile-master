@@ -8,7 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import java.security.Key;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -42,4 +44,11 @@ public class NavigationSectionPage {
         wait.until(ExpectedConditions.visibilityOf(button_account));
         button_account.click();
     }
+
+    public void tapNotification() {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOf(button_notification));
+        button_notification.click();
+    }
+
 }

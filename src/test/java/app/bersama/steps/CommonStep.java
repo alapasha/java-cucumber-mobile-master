@@ -4,6 +4,7 @@ import app.bersama.DriverManager;
 import app.bersama.pages.LoginPage;
 import app.bersama.pages.MyAccountPage;
 import app.bersama.pages.NavigationSectionPage;
+import app.bersama.pages.NotificationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,10 +50,16 @@ public class CommonStep {
 
     }
 
-    @Then("user should be able to logout")
-    public void user_successfully_register_new_account(String text) {
-        MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
-        myAccountPage.VerifyLogout(text);
+    @Then("user verify logout")
+    public void user_verify_logout() {
+        NavigationSectionPage navigationSectionPage = new NavigationSectionPage
+                (DriverManager.getInstance().getDriver());
+
+        NotificationPage notificationPage = new NotificationPage
+                (DriverManager.getInstance().getDriver());
+
+        navigationSectionPage.tapNotification();
+        notificationPage.VerifyLogout();
     }
 }
 
