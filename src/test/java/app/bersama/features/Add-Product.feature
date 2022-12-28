@@ -8,4 +8,4 @@ Feature: Add Product
   * user should be able to login
   When user add new product
   Then user publish new product
-  * user redirected to my sell list page
+  * add product success

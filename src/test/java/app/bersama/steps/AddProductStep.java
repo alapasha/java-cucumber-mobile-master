@@ -33,4 +33,11 @@ public class AddProductStep {
        MyProductPage myProductPage = new MyProductPage(DriverManager.getInstance().getDriver());
         Assert.assertTrue(myProductPage.redirectedToSellListPage());
     }
+
+    @Then("add product success")
+    public void addProductSuccess(){
+        AddProductPage addProductPage = new AddProductPage(DriverManager.getInstance().getDriver());
+        Assert.assertTrue(addProductPage.successMessage());
+    }
+
 }

@@ -61,6 +61,8 @@ public class AddProductPage {
     @FindBy(id = "id.binar.fp.secondhand:id/btn_publish")
     private WebElement buttonPublish;
 
+    @FindBy(id = "id.binar.fp.secondhand:id/tv_message")
+    private WebElement addProductSuccessMessage;
 
 
     public void addNewProduct(
@@ -89,4 +91,9 @@ public class AddProductPage {
         buttonPublish.click();
     }
 
+    public boolean successMessage(){
+        WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOf(addProductSuccessMessage));
+        return addProductSuccessMessage.isDisplayed();
+    }
 }
