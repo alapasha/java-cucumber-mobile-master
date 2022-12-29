@@ -26,10 +26,10 @@ public class MobileFactory {
 
         if (platformType.equalsIgnoreCase("ANDROID")) {
             dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
-            dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"13");
+            dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"9");
             dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.ANDROID.toString());
-            dc.setCapability(MobileCapabilityType.APP, absPathApk);
-            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "sdk_gphone64_x86_64");
+            dc.setCapability(MobileCapabilityType.APP, "D:\\QAE Binar\\APK Second Hand\\app-second-hand.apk");
+            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi 7A");
             dc.setCapability(MobileCapabilityType.NO_RESET, false);
 
         } else if (platformType.equalsIgnoreCase("IOS")) {
