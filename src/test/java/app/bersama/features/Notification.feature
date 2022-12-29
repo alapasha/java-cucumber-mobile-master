@@ -7,4 +7,4 @@ Feature: Notification
     * user login with valid credential
     * user should be able to login
     When user check notification menu
-    Then user shoul be able to see notification list
+    Then user should be able to see notification list
