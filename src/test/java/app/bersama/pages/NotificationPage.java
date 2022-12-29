@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class NotificationPage {
-
     private AppiumDriver driver;
 
     public NotificationPage(AppiumDriver appiumDriver) {
@@ -20,18 +19,13 @@ public class NotificationPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "id.binar.fp.secondhand:id/tv_title_page")
-    private WebElement notificationTitle;
+    @FindBy(id = "id.binar.fp.secondhand:id/tv_auth_body")
+    private WebElement label_notif;
 
-    public void notificationMenu() {
-        NavigationSectionPage navigationSectionPage = new NavigationSectionPage(DriverManager.getInstance().getDriver());
-        navigationSectionPage.tapNotificationButton();
-    }
-
-    public boolean VerifyNotificationList() {
+    public boolean VerifyLogout() {
         WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOf(notificationTitle));
-        return notificationTitle.isDisplayed();
-
+        wait.until(ExpectedConditions.visibilityOf(label_notif));
+        return label_notif.isDisplayed();
     }
+
 }

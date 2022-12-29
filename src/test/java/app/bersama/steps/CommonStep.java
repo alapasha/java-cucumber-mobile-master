@@ -4,9 +4,11 @@ import app.bersama.DriverManager;
 import app.bersama.pages.LoginPage;
 import app.bersama.pages.MyAccountPage;
 import app.bersama.pages.NavigationSectionPage;
+import app.bersama.pages.NotificationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.springframework.context.annotation.EnableMBeanExport;
 import org.testng.Assert;
 
 /**
@@ -31,12 +33,16 @@ public class CommonStep {
         LoginPage loginPage = new LoginPage(DriverManager.getInstance().getDriver());
         loginPage.enterCredential("raushanfiqriarya@gmail.com", "Password*1");
         loginPage.tapButtonLogin();
+
     }
 
-     @Then("user should be able to login")
-    public void userShouldBeAbleToLogin() {
-        MyAccountPage myAccountPage = new MyAccountPage(DriverManager.getInstance().getDriver());
-        Assert.assertTrue(myAccountPage.verifyLogin());
+    @Then("user should be able to login")
+    public void user_should_be_able_to_verify_to_my_account_page() {
+        LoginPage loginPage = new LoginPage(
+                DriverManager.getInstance().getDriver());
+
+        loginPage.assertLogin();
+
     }
 }
 

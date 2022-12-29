@@ -1,13 +1,16 @@
 package app.bersama.pages;
 
 import app.bersama.DriverManager;
+import app.bersama.Keyword;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import java.security.Key;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -42,9 +45,10 @@ public class NavigationSectionPage {
         button_account.click();
     }
 
-    public void tapNotificationButton() {button_notification.click();}
-
-    public void tapButtonHome(){
-        button_home.click();
+    public void tapNotification() {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOf(button_notification));
+        button_notification.click();
     }
+
 }
