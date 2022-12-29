@@ -42,6 +42,8 @@ public class NavigationSectionPage {
         button_account.click();
     }
 
+    public void tapNotificationButton() {button_notification.click();}
+
     public void tapButtonHome(){
         button_home.click();
     }
