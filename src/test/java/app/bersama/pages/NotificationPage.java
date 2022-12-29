@@ -28,4 +28,19 @@ public class NotificationPage {
         return label_notif.isDisplayed();
     }
 
+    @FindBy(id = "id.binar.fp.secondhand:id/tv_title_page")
+    private WebElement notificationTitle;
+
+    public void notificationMenu() {
+        NavigationSectionPage navigationSectionPage = new NavigationSectionPage(DriverManager.getInstance().getDriver());
+        navigationSectionPage.tapNotification();
+    }
+
+    public boolean VerifyNotificationList() {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOf(notificationTitle));
+        return notificationTitle.isDisplayed();
+
+    }
+
 }
