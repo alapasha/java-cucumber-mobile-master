@@ -41,4 +41,8 @@ public class NavigationSectionPage {
         wait.until(ExpectedConditions.visibilityOf(button_account));
         button_account.click();
     }
+
+    public void tapButtonHome(){
+        button_home.click();
+    }
 }
