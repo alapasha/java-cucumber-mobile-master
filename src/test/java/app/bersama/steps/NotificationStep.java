@@ -13,7 +13,7 @@ public class NotificationStep {
         notificationPage.notificationMenu();
     }
 
-    @Then("user shoul be able to see notification list")
+    @Then("user should be able to see notification list")
     public void userShoulBeAbleToSeeNotificationList() {
         NotificationPage notificationPage = new NotificationPage(DriverManager.getInstance().getDriver());
         Assert.assertTrue(notificationPage.VerifyNotificationList());
