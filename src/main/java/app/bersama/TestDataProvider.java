@@ -36,4 +36,10 @@ public class TestDataProvider {
     public static String getRandomEmail() {
         return getRandomStringMatchingPattern("random\\d{8}") + ".user-binar@test.binar.com";
     }
+
+    public static String getRandomProductName() {return faker.app().name();}
+
+    public static String getRandomDescription() {
+        return faker.lorem().sentence(20);
+    }
 }
