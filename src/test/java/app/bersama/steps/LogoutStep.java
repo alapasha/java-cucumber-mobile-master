@@ -5,7 +5,6 @@ import app.bersama.Keyword;
 import app.bersama.pages.LoginPage;
 import app.bersama.pages.MyAccountPage;
 import app.bersama.pages.NavigationSectionPage;
-import app.bersama.pages.NotificationPage;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
 
@@ -25,9 +24,9 @@ public class LogoutStep {
         navigationSectionPage.tapNotification();
     }
 
-    @Then("user verify logout {string}")
+    @Then("user verify logout")
     public void user_verify_logout() {
-        NotificationPage notificationPage = new NotificationPage(DriverManager.getInstance().getDriver());
-        Assert.assertTrue(notificationPage.VerifyLogout());
+        NavigationSectionPage navigationSectionPage = new NavigationSectionPage(DriverManager.getInstance().getDriver());
+        Assert.assertTrue(navigationSectionPage.VerifyLogout());
     }
 }

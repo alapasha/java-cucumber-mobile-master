@@ -39,6 +39,9 @@ public class NavigationSectionPage {
     @FindBy(id = "id.binar.fp.secondhand:id/navigation_home")
     private WebElement button_home;
 
+    @FindBy(id = "id.binar.fp.secondhand:id/tv_auth_body")
+    private WebElement label_notif;
+
     public void tapNavigationAccount() {
         WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOf(button_account));
@@ -50,5 +53,9 @@ public class NavigationSectionPage {
         wait.until(ExpectedConditions.visibilityOf(button_notification));
         button_notification.click();
     }
+    public boolean VerifyLogout() {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getInstance().getDriver(), 50);
+        wait.until(ExpectedConditions.visibilityOf(label_notif));
+        return label_notif.isDisplayed(); }
 
 }

@@ -4,7 +4,6 @@ import app.bersama.DriverManager;
 import app.bersama.pages.LoginPage;
 import app.bersama.pages.MyAccountPage;
 import app.bersama.pages.NavigationSectionPage;
-import app.bersama.pages.NotificationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
